@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Hangman</title>
+<style>
+#hangman {
+	/*display: none;*/
+}
+</style>
+	</head>
+	<body>
+		<form id='WortFormular'>
+			<label>Gib das Lösungswort ein:
+				<input type="password" name="wort" id="wortFeld">
+			</label>
+			<input type="button" value="ok" id="wortFestlegen">
+		</form>
+		<div id="hangman">
+			<div id="hangmanBild">
+				<img src="0.png"/>
+			</div>
+			<div id="wort">
+			</div>
+			<div id="alphabet">
+				<div class="buchstabe">A</div>
+				<div class="buchstabe">B</div>
+				<div class="buchstabe">C</div>
+				<div class="buchstabe">D</div>
+				<div class="buchstabe">E</div>
+				<div class="buchstabe">F</div>
+				<div class="buchstabe">G</div>
+				<div class="buchstabe">H</div>
+				<div class="buchstabe">I</div>
+				<div class="buchstabe">J</div>
+				<div class="buchstabe">K</div>
+				<div class="buchstabe">L</div>
+				<div class="buchstabe">M</div>
+				<div class="buchstabe">N</div>
+				<div class="buchstabe">O</div>
+				<div class="buchstabe">P</div>
+				<div class="buchstabe">Q</div>
+				<div class="buchstabe">R</div>
+				<div class="buchstabe">S</div>
+				<div class="buchstabe">T</div>
+				<div class="buchstabe">U</div>
+				<div class="buchstabe">V</div>
+				<div class="buchstabe">W</div>
+				<div class="buchstabe">X</div>
+				<div class="buchstabe">Y</div>
+				<div class="buchstabe">Z</div>
+			</div>
+		</div>
+	<script>
+	var ok = document.getElementById("wortFestlegen");
+	var wortFeld = document.getElementById("wortFeld");
+	var wortFormular = document.getElementById("WortFormular");
+	var wort = "";
+	var hangman = document.getElementById("hangman");
+	ok.addEventListener("click", function() {
+		wort = wortFeld.value;
+		wortFormular.style.display = "none";
+		hangman.style.display = "block";
+	});
+	</script>
+	</body>
+</html>
